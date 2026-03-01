@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Website in 2026!!</title>
+
+  <style>
+    /* ====== BODY & GENERAL ====== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffcccb;
+      text-shadow: 0 0 10px #ffcccb;
+      border-bottom: 2px solid #4fc3f7;
+    }
+
+    /* ====== CONTAINER ====== */
+    .container {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    /* ====== CARDS ====== */
+    .card, .profile-card, .artist-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+      border-radius: 25px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover, .profile-card:hover, .artist-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.07));
+    }
+
+    /* ====== HEADINGS ====== */
+    h2 {
+      color: #4fc3f7;
+      margin-top: 15px;
+      text-shadow: 0 0 8px #4fc3f7;
+    }
+
+    /* ====== IMAGES ====== */
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ====== AUDIO ====== */
+    audio {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    /* ====== BUTTONS ====== */
+    button {
+      background: linear-gradient(45deg, #2196f3, #00bcd4);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+      text-shadow: 0 0 4px #000;
+    }
+
+    button:hover {
+      transform: scale(1.15) rotate(-2deg);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(45deg, #00bcd4, #2196f3);
+    }
+
+    /* ====== SECTION TITLES ====== */
+    .section-title {
+      width: 100%;
+      margin-top: 50px;
+      color: #ffcccb;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px #ffcccb, 0 0 30px #ff4c4c;
+    }
+
+    /* ====== PARAGRAPHS ====== */
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #e0e0e0;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      color: #ffcccb;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px #ffcccb;
+      border-top: 2px solid #4fc3f7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Our Website</header>
+
+  <!-- INTRO -->
+  <div class="container">
+    <div class="card">
+      <h2>Welcome!</h2>
+      <p>This is a clean and modern website made using HTML and CSS.</p>
+      <button onclick="sayHello()">Click Me</button>
+    </div>
+
+    <div class="card">
+      <h2>Welcome to our website!</h2>
+      <p>Scroll down to see all the information about us.</p>
+    </div>
+  </div>
+
+  <!-- PROFILES -->
+  <h1 class="section-title">All of the things about us:</h1>
+  <div class="container">
+
+    <div class="profile-card">
+      <img src="erlman.jpeg" alt="Me">
+      <h2>This is Me</h2>
+      <p>
+        Hi! I'm Erl Man A. Del Rosario (Erl).
+        I'm 14 years old, I enjoy listening to music, playing games, watching movies.
+        I live in Guiwan Old Highway, Zamboanga City, Philippines.
+      </p>
+    </div>
+
+    <div class="profile-card">
+      <img src="yousef.jpeg" alt="Partner">
+      <h2>This is My Partner</h2>
+      <p>
+        Hi! I'm Yousef (Lulu), 15 years old.
+        I love watching movies and tracking them on Letterboxd.
+        I'm an INFJ and I live in Guiwan, Zamboanga City.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FAVORITE ARTISTS -->
+  <h1 class="section-title">Our Favorite Music Artists:</h1>
+  <div class="container">
+
+    <div class="artist-card">
+      <h2>My Favorite Artist</h2>
+      <img src="favnierlman.jpg" alt="My favorite artist">
+      <audio controls>
+        <source src="favnierlman.mp3" type="audio/mpeg">
+      </audio>
+      <p>
+        Nicki Walters is my favorite talented artist. Her songs express deep feelings, personal experiences, and meaningful messages that I can relate to. Because of her heartfelt style, her music feels comforting and inspiring to fans like us.
+      </p>
+    </div>
+
+    <div class="artist-card">
+      <h2>My Partner's Favorite Artist</h2>
+      <img src="favniyousef.jpeg" alt="Partner favorite artist">
+      <audio controls>
+        <source src="favniyousef.mp3" type="audio/mpeg">
+      </audio>
+      <p>
+        I chose Sufjan Stevens because his music is unique, emotional, and relaxing. His lyrics have deep meaning, and his songs feel genuine. My favorite song of his is “Futile Devices (Doveman Remix)” because it’s soft, peaceful, and comforting to listen to.
+      </p>
+    </div>
+
+  </div>
+  
+  
+
+  <!-- FAVORITES SECTION -->
+  <h1 class="section-title">Our Favorites:</h1>
+  <div class="container">
+
+    <!-- MOVIES -->
+    <div class="card">
+      <h2>🎬 My Favorite Movie</h2>
+      <img src="favmovienierl.jpg" alt="My favorite movie">
+      <p><strong>How to Train Your Dragon</strong></p>
+      <p>Description: It became my favorite because I used to watch this over and over again; it is my childhood movie.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎬 My Partner's Favorite Movie</h2>
+      <img src="favmovienisef.jpg" alt="Partner favorite movie">
+      <p><strong>Bones and All</strong></p>
+      <p>Description: My favorite movie is Bones and All, mainly because Taylor Russell and Timothée Chalamet are in it.</p>
+    </div>
+
+    <!-- GENRES -->
+    <div class="card">
+      <h2>🎞️ My Favorite Genre #1</h2>
+      <img src="favgenrenierl1.jpg" alt="My favorite genre 1">
+      <p><strong>Genre:</strong> (all types of genres)</p>
+      <p>Description: I like this genre because it includes comedy, horror, fantasy, and all the stuff I love.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎞️ My Favorite Genre #2</h2>
+      <img src="favgenrenierl2.jpg" alt="My favorite genre 2">
+      <p><strong>Genre:</strong> Romance</p>
+      <p>Description: I love this genre because it involves romance, which I really love. I can learn something from it.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎞️ My Partner's Favorite Genre #1</h2>
+      <img src="favgenrenisef1.jpg" alt="Partner favorite genre 1">
+      <p><strong>Genre:</strong> Coming-of-age</p>
+      <p>Description: I enjoy stories that show characters growing or surviving intense situations.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎞️ My Partner's Favorite Genre #2</h2>
+      <img src="favgenrenisef2.jpg" alt="Partner favorite genre 2">
+      <p><strong>Genre:</strong> Dystopian</p>
+      <p>Description: I enjoy stories that show characters growing or surviving intense situations.</p>
+    </div>
+
+    <!-- FOOD -->
+    <div class="card">
+      <h2>🍔 My Favorite Food</h2>
+      <img src="favfoodnierl.jpg" alt="My favorite food">
+      <p><strong>Food:</strong> Pizza</p>
+      <p>Description: I don’t just like this food; I love it. This is one of my favorite comfort foods.</p>
+    </div>
+
+    <div class="card">
+      <h2>🍕 My Partner's Favorite Food</h2>
+      <img src="favfoodnisef.jpg" alt="Partner favorite food">
+      <p><strong>Food:</strong> Sinigang</p>
+      <p>Description: I love sinigang because it’s warm and comforting.</p>
+    </div>
+
+    <!-- COLORS -->
+    <div class="card">
+      <h2>🎨 My Favorite Color</h2>
+      <img src="favcolornierl.png" alt="My favorite color">
+      <p><strong>Color:</strong> Black</p>
+      <p>Description: I love black because it fits every outfit I wear.</p>
+    </div>
+
+    <div class="card">
+      <h2>🎨 My Partner's Favorite Color</h2>
+      <img src="favcolornisef.png" alt="Partner favorite color">
+      <p><strong>Color:</strong> Navy Blue</p>
+      <p>Description: Navy blue feels like me.</p>
+    </div>
+
+    <!-- SUBJECTS -->
+    <div class="card">
+      <h2>📘 My Favorite Subject</h2>
+      <img src="favsubnierl.jpg" alt="My favorite subject">
+      <p><strong>Subject:</strong> Mathematics</p>
+      <p>Description: This is my favorite subject because i reallyy love solving and playing with numbers, and im kinda good at it, i got motivated from my father, because he is super good in math, he is my inspiration.</p>
+    </div>
+
+    <div class="card">
+      <h2>📕 My Partner's Favorite Subject</h2>
+      <img src="favsubnisef.jpg" alt="Partner favorite subject">
+      <p><strong>Subject:</strong> English</p>
+      <p>Description: I enjoy expressing my thoughts, reading stories, and understanding deeper meanings in English.</p>
+    </div>
+
+    <!-- DREAM CAREER -->
+    <h1 class="section-title">Our Dream Careers</h1>
+    <div class="container">
+
+      <div class="card">
+        <h2>💼 My Dream Career</h2>
+        <img src="dreamcareernierl.jpg" alt="My dream career">
+        <p><strong>Career:</strong> Computer Engineering</p>
+        <p>Description: Computer engineering was always in my dream or goals in my life, because my father is one of them, i got inspire by him, i want to explore everything in technology, i hope i will be become a Computer engineering ond day.</p>
+      </div>
+
+      <div class="card">
+        <h2>💼 My Partner's Dream Career</h2>
+        <img src="dreamcareernisef.jpg" alt="Partner dream career">
+        <p><strong>Career:</strong> Dentist</p>
+        <p>Description: I’m not completely sure about my future yet, but I’m considering becoming a dentist here in the Philippines. I like the idea of having a stable and meaningful career where I can help people and improve their confidence. At the same time, part of me still dreams about exploring life somewhere far away and living freely.</p>
+      </div>
+      <!-- OUTRO -->
+  <div class="outro">
+    <h1>Thanks for Visiting And Watching for our website!!!</h1>
+    <p>We hope you enjoyed learning more about us.</p>
+    <button onclick="alert('See you next time!')">Say Goodbye</button>
+  </div>
+
+  <style>
+    /* ====== OUTRO ====== */
+    .outro {
+      margin: 50px auto;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+      border-radius: 25px;
+      max-width: 800px;
+      text-align: center;
+      color: #ffcccb;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      animation: fadeInOutro 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .outro h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ffcccb;
+    }
+
+    .outro p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .outro button {
+      background: linear-gradient(45deg, #ff4c4c, #ffcccb);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      text-shadow: 0 0 4px #000;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    }
+
+    .outro button:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(45deg, #ffcccb, #ff4c4c);
+    }
+
+    @keyframes fadeInOutro {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <h3>Our Website in 2026!</h3>
+  </footer>
+
+  <script>
+    function sayHello() {
+      alert("Hello! This is our website.");
+    }
+  </script>
+
+</body>
+</html>
